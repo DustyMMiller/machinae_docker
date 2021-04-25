@@ -1,10 +1,16 @@
-FROM python:3.6.13-alpine
-
-RUN pip3 install machinae
+FROM python:3.8-alpine
 
 RUN apk update
 
 RUN apk add git
+
+RUN apk add libmagic
+
+RUN pip3 install filemagic==1.6
+
+RUN pip3 install python-magic
+
+RUN pip3 install machinae
 
 RUN git clone https://github.com/DustyMMiller/machinae_docker
 
