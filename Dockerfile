@@ -2,9 +2,9 @@ FROM python:3.6.13-alpine
 
 RUN pip3 install machinae
 
-RUN apt-get  update
+RUN apk update
 
-RUN apt-get install git
+RUN apk add git
 
 RUN git clone https://github.com/DustyMMiller/machinae_docker
 
